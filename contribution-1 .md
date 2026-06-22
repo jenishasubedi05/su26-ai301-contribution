@@ -3,7 +3,7 @@
 **Contribution Number:** 1
 **Student:** Jenisha Subedi
 **Issue:** https://github.com/graphql-hive/console/issues/6892
-**Status:** Phase II Complete
+**Status:** Phase III Complete
 
 ---
 
@@ -107,14 +107,26 @@ Issue #6892 asks for the schema check view to explain *why* a schema change is c
 ---
 
 ## Testing Strategy
+Manually verified the code changes compile without errors after running `pnpm graphql:generate`. Next steps: add unit tests for the new `criticalityReason` field and verify the UI displays the reason correctly in the local dashboard.
 
-[To be filled in Phase II]
+
 
 ---
 
 ## Implementation Notes
+## Changes Made
 
-[To be filled in Phase II onwards]
+1. **`packages/services/api/src/modules/schema/providers/inspector.ts`**
+   Added `reason: change.criticality.reason` to the `HiveSchemaChangeModel.parse()` call so the criticality reason is passed through the model.
+
+2. **`packages/web/app/src/components/target/history/errors-and-changes.tsx`**
+   - Added `criticalityReason` to both `ChangesBlock_SchemaChangeWithUsageFragment` and `ChangesBlock_SchemaChangeFragment` GraphQL fragments
+   - Added UI display: when a change is safe based on usage and has a `criticalityReason`, it now renders inline next to "Safe based on usage data"
+
+### Branch
+https://github.com/jenishasubedi05/console/tree/feature/6892-safe-change-context
+
+
 
 ---
 
