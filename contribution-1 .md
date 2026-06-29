@@ -3,7 +3,7 @@
 **Contribution Number:** 1
 **Student:** Jenisha Subedi
 **Issue:** https://github.com/graphql-hive/console/issues/6892
-**Status:** Phase III Complete
+**Status:** Phase IV COMPLETE
 
 ---
 
@@ -132,9 +132,13 @@ https://github.com/jenishasubedi05/console/tree/feature/6892-safe-change-context
 
 ## Pull Request
 
-[To be filled in Phase III]
+**PR Link:** https://github.com/graphql-hive/console/pull/8182
 
----
+**PR Description:**
+This PR surfaces the existing `criticalityReason` field through to the frontend UI. When a schema change is marked safe based on usage data, the criticality reason now displays inline next to "Safe based on usage data" in the schema check results view.
+
+**Status:** Awaiting review
+No feedback received yet — awaiting review.
 
 ## Learnings & Reflections
 
