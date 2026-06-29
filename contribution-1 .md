@@ -138,7 +138,8 @@ https://github.com/jenishasubedi05/console/tree/feature/6892-safe-change-context
 This PR surfaces the existing `criticalityReason` field through to the frontend UI. When a schema change is marked safe based on usage data, the criticality reason now displays inline next to "Safe based on usage data" in the schema check results view.
 
 **Status:** Awaiting review
-No feedback received yet — awaiting review.
+ Gemini Code Assist bot flagged 4 issues: temporary bundled .mjs files with local paths, prebuild script change, JSX indentation, and schema-v1.graphql BOM. All addressed in follow-up commit `49500c3`.
+
 
 ## Learnings & Reflections
 
